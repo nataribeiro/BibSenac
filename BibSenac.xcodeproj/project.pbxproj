@@ -18,6 +18,7 @@
 		FF0CE33E1DE9C59A00CD5006 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE33D1DE9C59A00CD5006 /* SearchViewController.swift */; };
 		FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */; };
 		FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */; };
+		FF0CE3451DE9EEA300CD5006 /* AvailableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FF0CE33D1DE9C59A00CD5006 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				FF0CE33D1DE9C59A00CD5006 /* SearchViewController.swift */,
 				FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */,
 				FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */,
+				FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */,
 				FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */,
 				FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */,
+				FF0CE3451DE9EEA300CD5006 /* AvailableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,7 +67,7 @@
                                 <rect key="frame" x="16" y="565" width="343" height="28"/>
                                 <state key="normal" title="Buscar"/>
                                 <connections>
-                                    <segue destination="JNS-Yc-Ued" kind="show" id="2aa-ku-aVF"/>
+                                    <segue destination="JNS-Yc-Ued" kind="show" identifier="showSearchResult" id="2aa-ku-aVF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,7 +92,7 @@
         <!--Resultado da Busca-->
         <scene sceneID="Bg7-xd-IfW">
             <objects>
-                <tableViewController title="Resultado da Busca" id="JNS-Yc-Ued" sceneMemberID="viewController">
+                <tableViewController title="Resultado da Busca" id="JNS-Yc-Ued" customClass="TableViewController" customModule="BibSenac" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ip-fc-dYe">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dUv-qe-FtE" kind="show" id="SRd-o1-kls"/>
+                                    <segue destination="dUv-qe-FtE" kind="show" identifier="showCollectionDetail" id="SRd-o1-kls"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -152,7 +152,7 @@
         <!--Detalhes-->
         <scene sceneID="zZG-Pr-iGz">
             <objects>
-                <viewController title="Detalhes" id="dUv-qe-FtE" sceneMemberID="viewController">
+                <viewController title="Detalhes" id="dUv-qe-FtE" customClass="DetailViewController" customModule="BibSenac" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jcr-fb-wYk"/>
                         <viewControllerLayoutGuide type="bottom" id="Jo2-NQ-xSc"/>
@@ -219,6 +219,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-qr-2Jw">
                                 <rect key="frame" x="16" y="563" width="343" height="30"/>
                                 <state key="normal" title="Verificar Disponibilidade"/>
+                                <connections>
+                                    <segue destination="0rd-tt-JGB" kind="showDetail" identifier="showAvailable" id="qtK-66-BLP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,6 +251,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNn-hC-8Vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2757.5999999999999" y="694.90254872563719"/>
+        </scene>
+        <!--Disponibilidade-->
+        <scene sceneID="Tgq-1H-clM">
+            <objects>
+                <tableViewController title="Disponibilidade" id="0rd-tt-JGB" customClass="AvailableTableViewController" customModule="BibSenac" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" id="KUu-zr-iXa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="cZM-zq-aID" detailTextLabel="5kE-s0-p7z" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="Hml-DM-bnX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hml-DM-bnX" id="8H9-gQ-otf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cZM-zq-aID">
+                                            <rect key="frame" x="15" y="18" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5kE-s0-p7z">
+                                            <rect key="frame" x="15" y="39" width="33" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0rd-tt-JGB" id="nEK-n6-fbP"/>
+                            <outlet property="delegate" destination="0rd-tt-JGB" id="FoL-qt-lGc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIU-ZY-z6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3607" y="695"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RQm-ZY-QFA">
