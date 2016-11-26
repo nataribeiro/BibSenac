@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */; };
-		FF0CE30B1DE9BFAC00CD5006 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE30A1DE9BFAC00CD5006 /* ViewController.swift */; };
 		FF0CE30E1DE9BFAC00CD5006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE30C1DE9BFAC00CD5006 /* Main.storyboard */; };
 		FF0CE3101DE9BFAC00CD5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */; };
 		FF0CE3131DE9BFAC00CD5006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE3111DE9BFAC00CD5006 /* LaunchScreen.storyboard */; };
 		FF0CE31E1DE9BFAC00CD5006 /* BibSenacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE31D1DE9BFAC00CD5006 /* BibSenacTests.swift */; };
 		FF0CE3291DE9BFAC00CD5006 /* BibSenacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3281DE9BFAC00CD5006 /* BibSenacUITests.swift */; };
+		FF0CE3371DE9C50300CD5006 /* Acervo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3361DE9C50300CD5006 /* Acervo.swift */; };
+		FF0CE33C1DE9C56500CD5006 /* Disponibilidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE33B1DE9C56500CD5006 /* Disponibilidade.swift */; };
+		FF0CE33E1DE9C59A00CD5006 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE33D1DE9C59A00CD5006 /* SearchViewController.swift */; };
+		FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */; };
+		FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		FF0CE3051DE9BFAC00CD5006 /* BibSenac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibSenac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF0CE30A1DE9BFAC00CD5006 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF0CE30D1DE9BFAC00CD5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF0CE3121DE9BFAC00CD5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		FF0CE3241DE9BFAC00CD5006 /* BibSenacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibSenacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0CE3281DE9BFAC00CD5006 /* BibSenacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibSenacUITests.swift; sourceTree = "<group>"; };
 		FF0CE32A1DE9BFAC00CD5006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF0CE3361DE9C50300CD5006 /* Acervo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acervo.swift; sourceTree = "<group>"; };
+		FF0CE33B1DE9C56500CD5006 /* Disponibilidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disponibilidade.swift; sourceTree = "<group>"; };
+		FF0CE33D1DE9C59A00CD5006 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,10 @@
 		FF0CE3071DE9BFAC00CD5006 /* BibSenac */ = {
 			isa = PBXGroup;
 			children = (
-				FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */,
-				FF0CE30A1DE9BFAC00CD5006 /* ViewController.swift */,
-				FF0CE30C1DE9BFAC00CD5006 /* Main.storyboard */,
-				FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */,
-				FF0CE3111DE9BFAC00CD5006 /* LaunchScreen.storyboard */,
-				FF0CE3141DE9BFAC00CD5006 /* Info.plist */,
+				FF0CE3381DE9C52B00CD5006 /* SupportFiles */,
+				FF0CE33F1DE9C5A700CD5006 /* Controller */,
+				FF0CE3391DE9C53A00CD5006 /* View */,
+				FF0CE33A1DE9C54200CD5006 /* Model */,
 			);
 			path = BibSenac;
 			sourceTree = "<group>";
@@ -123,6 +129,44 @@
 				FF0CE32A1DE9BFAC00CD5006 /* Info.plist */,
 			);
 			path = BibSenacUITests;
+			sourceTree = "<group>";
+		};
+		FF0CE3381DE9C52B00CD5006 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */,
+				FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */,
+				FF0CE3111DE9BFAC00CD5006 /* LaunchScreen.storyboard */,
+				FF0CE3141DE9BFAC00CD5006 /* Info.plist */,
+			);
+			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FF0CE3391DE9C53A00CD5006 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0CE30C1DE9BFAC00CD5006 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FF0CE33A1DE9C54200CD5006 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0CE3361DE9C50300CD5006 /* Acervo.swift */,
+				FF0CE33B1DE9C56500CD5006 /* Disponibilidade.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FF0CE33F1DE9C5A700CD5006 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF0CE33D1DE9C59A00CD5006 /* SearchViewController.swift */,
+				FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */,
+				FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0CE30B1DE9BFAC00CD5006 /* ViewController.swift in Sources */,
+				FF0CE3371DE9C50300CD5006 /* Acervo.swift in Sources */,
+				FF0CE33C1DE9C56500CD5006 /* Disponibilidade.swift in Sources */,
+				FF0CE33E1DE9C59A00CD5006 /* SearchViewController.swift in Sources */,
+				FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */,
+				FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */,
 				FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
