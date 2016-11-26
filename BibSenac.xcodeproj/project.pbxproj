@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56AC650B47D9F0140A474F67 /* Pods_BibSenac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */; };
+		ADB3C41F03E0E56E2670D1DA /* Pods_BibSenacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F8E27B63C88E5CD1E0F46A /* Pods_BibSenacUITests.framework */; };
+		BA626B688C2FC668FB460806 /* Pods_BibSenacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEC1FA97A90EE3EF869FBAC /* Pods_BibSenacTests.framework */; };
 		FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */; };
 		FF0CE30E1DE9BFAC00CD5006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE30C1DE9BFAC00CD5006 /* Main.storyboard */; };
 		FF0CE3101DE9BFAC00CD5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */; };
@@ -39,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		274A86B564AC1C6B473C7461 /* Pods-BibSenacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacTests/Pods-BibSenacTests.release.xcconfig"; sourceTree = "<group>"; };
+		2DEC1FA97A90EE3EF869FBAC /* Pods_BibSenacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibSenacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		302DC2468372330D2EB94655 /* Pods-BibSenac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac.debug.xcconfig"; sourceTree = "<group>"; };
+		31A83E05B867F6BB2154DC12 /* Pods-BibSenacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacUITests/Pods-BibSenacUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32F8E27B63C88E5CD1E0F46A /* Pods_BibSenacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibSenacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BFC38BFD31EBA71EA6103F /* Pods-BibSenacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacUITests/Pods-BibSenacUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibSenac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFAC0BA43E01518724F75EBF /* Pods-BibSenacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacTests/Pods-BibSenacTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E21CBF60F5B2E704DA2EACFA /* Pods-BibSenac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac.release.xcconfig"; sourceTree = "<group>"; };
 		FF0CE3051DE9BFAC00CD5006 /* BibSenac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibSenac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF0CE30D1DE9BFAC00CD5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AC650B47D9F0140A474F67 /* Pods_BibSenac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA626B688C2FC668FB460806 /* Pods_BibSenacTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB3C41F03E0E56E2670D1DA /* Pods_BibSenacUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59F2AC8066E410C3572712D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				302DC2468372330D2EB94655 /* Pods-BibSenac.debug.xcconfig */,
+				E21CBF60F5B2E704DA2EACFA /* Pods-BibSenac.release.xcconfig */,
+				CFAC0BA43E01518724F75EBF /* Pods-BibSenacTests.debug.xcconfig */,
+				274A86B564AC1C6B473C7461 /* Pods-BibSenacTests.release.xcconfig */,
+				47BFC38BFD31EBA71EA6103F /* Pods-BibSenacUITests.debug.xcconfig */,
+				31A83E05B867F6BB2154DC12 /* Pods-BibSenacUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95D20CA3705F7386F6045112 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */,
+				2DEC1FA97A90EE3EF869FBAC /* Pods_BibSenacTests.framework */,
+				32F8E27B63C88E5CD1E0F46A /* Pods_BibSenacUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF0CE2FC1DE9BFAC00CD5006 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +129,8 @@
 				FF0CE31C1DE9BFAC00CD5006 /* BibSenacTests */,
 				FF0CE3271DE9BFAC00CD5006 /* BibSenacUITests */,
 				FF0CE3061DE9BFAC00CD5006 /* Products */,
+				59F2AC8066E410C3572712D5 /* Pods */,
+				95D20CA3705F7386F6045112 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF0CE32D1DE9BFAC00CD5006 /* Build configuration list for PBXNativeTarget "BibSenac" */;
 			buildPhases = (
+				B0137D88F1E374EE53CDAF70 /* [CP] Check Pods Manifest.lock */,
 				FF0CE3011DE9BFAC00CD5006 /* Sources */,
 				FF0CE3021DE9BFAC00CD5006 /* Frameworks */,
 				FF0CE3031DE9BFAC00CD5006 /* Resources */,
+				69BB6D13952D4FA6E0D86EDD /* [CP] Embed Pods Frameworks */,
+				F7DCDAD866E47DF0199F5529 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF0CE3301DE9BFAC00CD5006 /* Build configuration list for PBXNativeTarget "BibSenacTests" */;
 			buildPhases = (
+				61487567501096DF70543917 /* [CP] Check Pods Manifest.lock */,
 				FF0CE3151DE9BFAC00CD5006 /* Sources */,
 				FF0CE3161DE9BFAC00CD5006 /* Frameworks */,
 				FF0CE3171DE9BFAC00CD5006 /* Resources */,
+				EA12BBA6B7EC8C0A20692233 /* [CP] Embed Pods Frameworks */,
+				56C5E5371E2406F8A904BD97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF0CE3331DE9BFAC00CD5006 /* Build configuration list for PBXNativeTarget "BibSenacUITests" */;
 			buildPhases = (
+				E67B1672BD672ED02715C5A3 /* [CP] Check Pods Manifest.lock */,
 				FF0CE3201DE9BFAC00CD5006 /* Sources */,
 				FF0CE3211DE9BFAC00CD5006 /* Frameworks */,
 				FF0CE3221DE9BFAC00CD5006 /* Resources */,
+				399E8B0CC23F2D0A280E6D4F /* [CP] Embed Pods Frameworks */,
+				8BF411DD74CBE5AC2073E9D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,6 +349,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		399E8B0CC23F2D0A280E6D4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenacUITests/Pods-BibSenacUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56C5E5371E2406F8A904BD97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenacTests/Pods-BibSenacTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61487567501096DF70543917 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69BB6D13952D4FA6E0D86EDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BF411DD74CBE5AC2073E9D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenacUITests/Pods-BibSenacUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0137D88F1E374EE53CDAF70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E67B1672BD672ED02715C5A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA12BBA6B7EC8C0A20692233 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenacTests/Pods-BibSenacTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DCDAD866E47DF0199F5529 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF0CE3011DE9BFAC00CD5006 /* Sources */ = {
@@ -462,9 +649,11 @@
 		};
 		FF0CE32E1DE9BFAC00CD5006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302DC2468372330D2EB94655 /* Pods-BibSenac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BibSenac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edm.BibSenac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,9 +663,11 @@
 		};
 		FF0CE32F1DE9BFAC00CD5006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21CBF60F5B2E704DA2EACFA /* Pods-BibSenac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BibSenac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edm.BibSenac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +677,7 @@
 		};
 		FF0CE3311DE9BFAC00CD5006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFAC0BA43E01518724F75EBF /* Pods-BibSenacTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -500,6 +692,7 @@
 		};
 		FF0CE3321DE9BFAC00CD5006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274A86B564AC1C6B473C7461 /* Pods-BibSenacTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +707,7 @@
 		};
 		FF0CE3341DE9BFAC00CD5006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47BFC38BFD31EBA71EA6103F /* Pods-BibSenacUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BibSenacUITests/Info.plist;
@@ -527,6 +721,7 @@
 		};
 		FF0CE3351DE9BFAC00CD5006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31A83E05B867F6BB2154DC12 /* Pods-BibSenacUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = BibSenacUITests/Info.plist;
@@ -557,6 +752,7 @@
 				FF0CE32F1DE9BFAC00CD5006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF0CE3301DE9BFAC00CD5006 /* Build configuration list for PBXNativeTarget "BibSenacTests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +761,7 @@
 				FF0CE3321DE9BFAC00CD5006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF0CE3331DE9BFAC00CD5006 /* Build configuration list for PBXNativeTarget "BibSenacUITests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +770,7 @@
 				FF0CE3351DE9BFAC00CD5006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

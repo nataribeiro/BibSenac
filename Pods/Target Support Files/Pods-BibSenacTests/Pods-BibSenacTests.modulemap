@@ -1,0 +1,6 @@
+framework module Pods_BibSenacTests {
+  umbrella header "Pods-BibSenacTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
