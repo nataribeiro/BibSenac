@@ -7,33 +7,25 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SearchResults : NSObject {
 
     var isThereMore: Bool = false
     var livros: [Acervo] = []
     override init() {}
-    init(JSONData: Data) {
+    init(JSONData: JSON) {
         super.init()
         
-        do{
-            let options = JSONSerialization.ReadingOptions.allowFragments
-            let dict: NSDictionary = try JSONSerialization.jsonObject(with: JSONData, options: options) as! NSDictionary
-        
-            self.isThereMore = dict["isThereMore"] as! Bool
+            self.isThereMore = JSONData["isThereMore"] == "true"
             
-            let livros = dict["livros"] as! NSArray
+            let livros = JSONData["livros"]
             // Loop
             for (value) in livros
             {
-                let item = Acervo(dict: value as! NSDictionary)
+                let item = Acervo(dict: value.1)
                 self.livros.append(item)
             }
-            // Or you can do it with using
-            //self.setValuesForKeys(dict)
-            // instead of loop method above
-        } catch {
-            print(error)
-        }
+
     }
 }

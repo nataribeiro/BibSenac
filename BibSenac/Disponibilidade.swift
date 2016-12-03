@@ -7,15 +7,29 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-struct Disponibilidade {
-    let local : String?
-    let parte : String?
-    let disponib : String?
-    let localiza: String?
-    let dt_empre : String?
-    let dt_devol : String?
-    let exemplar : String?
-    let colecao : String?
+class Disponibilidade : NSObject {
+    init(JSONData: JSON) {
+        super.init()
+        
+
+            for (k, v) in JSONData
+            {
+                if self.responds(to: Selector(k))
+                {
+                    self.setValue(v.rawValue, forKey: k)
+                }
+            }
+
+    }
+    var local : String?
+    var parte : String?
+    var disponib : String?
+    var localiza: String?
+    var dt_empre : String?
+    var dt_devol : String?
+    var exemplar : String?
+    var colecao : String?
 }
 

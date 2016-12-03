@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+   
+    let api = AvailabilityService()
+    var availables = [Disponibilidade]()
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
@@ -23,21 +26,32 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        acervo = Acervo()
-        acervo.dstaq = "Título do Acervo"
-        acervo.chamd = ""
-        acervo.aPrin = "Autor Principal Autor Principal Autor Principal "
-        acervo.aArtg = ""
-        acervo.aScdr = "Autor Secundário Autor Secundário Autor Secundário "
-        acervo.pbcao = "1990"
-        acervo.fsico = "255 páginas"
-        acervo.rsumo = "Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Leite de capivaris, leite de mula manquis. Paisis, filhis, espiritis santis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.\nA ordem dos tratores não altera o pão duris Diuretics paradis num copo é motivis de denguis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl."
-         acervo.notas = "Adicionais ao Resumo"
-         acervo.assun = "Assuntos"
-         acervo.urlImg = "http://www.test-study-guides.com/wp-content/uploads/2013/03/Best-TOEFL-Books9.png"
-        
         loadAcervoDetails()
         // Do any additional setup after loading the view.
+    }
+    
+    func getAvailability(_senac: String)
+    {
+        self._senac = _senac
+        
+        api.loadData(_senac){ result, error in
+            if error == nil {
+                self.availables = result
+            } else {
+                print(error.debugDescription)
+            }
+            
+        }
+     
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if (segue.identifier == "showAvailable") {
+            if let svc = segue.destination as? AvailableTableViewController
+            {
+                svc.availables = self.availables
+            } 
+        }
     }
     
     func loadAcervoDetails() {

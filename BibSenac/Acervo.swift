@@ -7,20 +7,20 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Acervo : NSObject {
     override init() {
         super.init()
     }
-    init(dict: NSDictionary) {
+    init(dict: JSON) {
         super.init()
         
         for (k, v) in dict
         {
-            let key = k as! String
-            if self.responds(to: Selector(key))
+            if self.responds(to: Selector(k))
             {
-                self.setValue(v, forKey: key)
+                self.setValue(v.rawValue, forKey: k)
             }
         }
         
