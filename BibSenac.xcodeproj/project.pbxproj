@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56AC650B47D9F0140A474F67 /* Pods_BibSenac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */; };
+		60C56C701DF340AC008988AE /* AvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C56C6F1DF340AC008988AE /* AvailabilityService.swift */; };
 		ADB3C41F03E0E56E2670D1DA /* Pods_BibSenacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F8E27B63C88E5CD1E0F46A /* Pods_BibSenacUITests.framework */; };
 		BA626B688C2FC668FB460806 /* Pods_BibSenacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEC1FA97A90EE3EF869FBAC /* Pods_BibSenacTests.framework */; };
 		F105CFDE1DF28D3D0092C407 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105CFDD1DF28D3D0092C407 /* SearchService.swift */; };
@@ -51,6 +52,7 @@
 		31A83E05B867F6BB2154DC12 /* Pods-BibSenacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacUITests/Pods-BibSenacUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32F8E27B63C88E5CD1E0F46A /* Pods_BibSenacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibSenacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47BFC38BFD31EBA71EA6103F /* Pods-BibSenacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacUITests/Pods-BibSenacUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		60C56C6F1DF340AC008988AE /* AvailabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityService.swift; sourceTree = "<group>"; };
 		A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibSenac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAC0BA43E01518724F75EBF /* Pods-BibSenacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacTests/Pods-BibSenacTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E21CBF60F5B2E704DA2EACFA /* Pods-BibSenac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		F105CFDA1DF28B4D0092C407 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				60C56C6F1DF340AC008988AE /* AvailabilityService.swift */,
 				F105CFDD1DF28D3D0092C407 /* SearchService.swift */,
 			);
 			name = Services;
@@ -534,6 +537,7 @@
 				FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */,
 				F105CFE01DF28D430092C407 /* SearchResults.swift in Sources */,
 				FF0CE3451DE9EEA300CD5006 /* AvailableTableViewController.swift in Sources */,
+				60C56C701DF340AC008988AE /* AvailabilityService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
