@@ -39,6 +39,7 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func btnSearch(_ sender: AnyObject) {
+        
         api.loadData(textTitulo.text!, textAutor.text!, textAssunto.text!){ result, error in
             if let error = error
             {
@@ -46,8 +47,16 @@ class SearchViewController: UIViewController {
             }
             else
             {
-                self.results = result!
-                self.performSegue(withIdentifier: "showSearchResult", sender: sender)
+                if result != nil && (result?.livros.count)! > 0 {
+                    self.results = result!
+                    self.performSegue(withIdentifier: "showSearchResult", sender: sender)
+                } else {
+                    let alert = UIAlertController(title: "Nenhum resultado encontrado!", message: "Altere os dados da consulta e tente novamente.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                        self.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
         }
     }

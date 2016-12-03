@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblSummary: UITextView!
     @IBOutlet weak var btnCheckAvailability: UIButton!
     
-    var acervo: Acervo = Acervo()
+    var acervo = Acervo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,12 +63,15 @@ class DetailViewController: UIViewController {
         lblCoauthor.text = acervo.aScdr
         lblPublish.text = acervo.pbcao
         lblSummary.text = acervo.rsumo
-        let urlImage = URL(string: (acervo.urlImg)!)
         
-        DispatchQueue.main.async {
-            let data = try! Data(contentsOf: urlImage!)
-            self.imgCollection.image = UIImage(data: data)
-            
+        
+        if let urlImage = URL(string: (acervo.urlImg)!) {
+            DispatchQueue.main.async {
+                let data = try! Data(contentsOf: urlImage)
+                self.imgCollection.image = UIImage(data: data)
+            }
+        } else {
+            imgCollection.image = #imageLiteral(resourceName: "no_image_available")
         }
 
     }
@@ -78,15 +81,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
