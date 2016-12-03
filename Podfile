@@ -4,6 +4,8 @@
 def shared_pods
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'BibSenac' do

@@ -10,16 +10,17 @@ import UIKit
 
 class SearchService : NSObject
 {
-    func getURL(_ titulo: String, _ autor:String,_ assunto:String) -> NSURL? {
-        let baseUrl = "http://pelletteria.net.br/edm/modulos/banco/webservice/package/ctrl/CtrlObj.php?method=get_acervo"
+    func getURL(_ titulo: NSString, _ autor:NSString,_ assunto:NSString) -> NSURL? {
+        let baseUrl = "http://pelletteria.net.br/edm/modulos/banco/webservice/package/ctrl/CtrlObj.php?method=get_acervo" as NSString
         
-        let requestURL = NSURL(string: (baseUrl+"&titulo="+titulo+"&autor="+autor+"&assunto="+assunto).addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics)!)
+        let params = "\(baseUrl)&titulo=\(titulo)&autor=\(autor)&assunto=\(assunto)"
+        let requestURL = NSURL(string: (params))
         
         return requestURL
     }
     
     func loadData(_ titulo:String, _ autor:String,_ assunto:String, _ completion: @escaping (_ result: SearchResults?, _ error: NSError?) -> Void) {
-        guard let loadURL = getURL(titulo, autor, assunto) else {
+        guard let loadURL = getURL(titulo as NSString, autor as NSString, assunto as NSString) else {
             DispatchQueue.main.async {
                 completion(nil, nil)
             }

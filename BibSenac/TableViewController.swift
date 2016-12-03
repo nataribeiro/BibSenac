@@ -10,7 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var results: SearchResults? = nil
+    var results: SearchResults?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,7 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,22 +32,30 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (results?.livros.count)!
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
-        if let acervo = results?.livros[indexPath.row] {
-            cell.textLabel?.text = acervo.dstaq
-            //cell.detailTextLabel?.text = acervo.aPrin
+        let acervo = results?.livros[indexPath.row]
+        cell.lblTitle.text = acervo?.dstaq
+        cell.lblSummary.text = acervo?.rsumo
+        
+        if let img = acervo?.urlImg {
+            let urlImage = URL(string: (img))
+            
+            DispatchQueue.main.async {
+                let data = try! Data(contentsOf: urlImage!)
+                cell.imgCollection.image = UIImage(data: data)
+            }
         }
-        
+
         return cell
     }
     

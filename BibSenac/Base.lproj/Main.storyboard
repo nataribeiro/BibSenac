@@ -66,9 +66,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7e-qT-MWO">
                                 <rect key="frame" x="16" y="565" width="343" height="28"/>
                                 <state key="normal" title="Buscar"/>
-                                <connections>
-                                    <segue destination="JNS-Yc-Ued" kind="show" identifier="showSearchResult" id="2aa-ku-aVF"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,6 +85,7 @@
                         <outlet property="textAssunto" destination="57r-aO-71B" id="86F-yh-7pK"/>
                         <outlet property="textAutor" destination="4ZV-vZ-kKv" id="W1b-eU-AMM"/>
                         <outlet property="textTitulo" destination="fyR-RS-gwt" id="LoD-ei-Qb9"/>
+                        <segue destination="JNS-Yc-Ued" kind="show" identifier="showSearchResult" id="w0I-js-Xfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,11 +101,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="151" id="hAy-Yf-xNI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="151" id="hAy-Yf-xNI" customClass="TableViewCell" customModule="BibSenac" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hAy-Yf-xNI" id="h6T-BM-Brk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4YT-7B-e1G">
@@ -140,6 +138,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgCollection" destination="4YT-7B-e1G" id="3Nx-4b-6nY"/>
+                                    <outlet property="lblSummary" destination="Ppo-c6-A2N" id="sz3-3u-ZT8"/>
+                                    <outlet property="lblTitle" destination="eVH-DJ-Smr" id="wk5-6b-ksi"/>
                                     <segue destination="dUv-qe-FtE" kind="show" identifier="showCollectionDetail" id="SRd-o1-kls"/>
                                 </connections>
                             </tableViewCell>
@@ -291,18 +292,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hml-DM-bnX" id="8H9-gQ-otf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cZM-zq-aID">
-                                            <rect key="frame" x="15" y="18" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="19" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5kE-s0-p7z">
-                                            <rect key="frame" x="15" y="39" width="33" height="15"/>
+                                            <rect key="frame" x="15" y="39.5" width="33" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>

@@ -24,6 +24,7 @@
 		FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */; };
 		FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */; };
 		FF0CE3451DE9EEA300CD5006 /* AvailableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */; };
+		FF1D74361DF2E54D007B067E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1D74351DF2E54D007B067E /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableTableViewController.swift; sourceTree = "<group>"; };
+		FF1D74351DF2E54D007B067E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				FF0CE3401DE9C5D300CD5006 /* TableViewController.swift */,
 				FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */,
 				FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */,
+				FF1D74351DF2E54D007B067E /* TableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				FF0CE3031DE9BFAC00CD5006 /* Resources */,
 				69BB6D13952D4FA6E0D86EDD /* [CP] Embed Pods Frameworks */,
 				F7DCDAD866E47DF0199F5529 /* [CP] Copy Pods Resources */,
+				FF1D74341DF2E123007B067E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -500,6 +504,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF1D74341DF2E123007B067E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 631ff593fdf2aa6d6dc03a3bd1fbef343b66fa35 30454993ce627c34ce840a1f43abdad93b19f0f9c36605728865fb96e12dcde8";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -512,6 +529,7 @@
 				FF0CE33E1DE9C59A00CD5006 /* SearchViewController.swift in Sources */,
 				FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */,
 				FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */,
+				FF1D74361DF2E54D007B067E /* TableViewCell.swift in Sources */,
 				F105CFDE1DF28D3D0092C407 /* SearchService.swift in Sources */,
 				FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */,
 				F105CFE01DF28D430092C407 /* SearchResults.swift in Sources */,
