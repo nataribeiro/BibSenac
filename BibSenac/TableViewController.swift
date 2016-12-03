@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var results: SearchResults? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +36,31 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        if let acervo = results?.livros[indexPath.row] {
+            cell.textLabel?.text = acervo.dstaq
+            //cell.detailTextLabel?.text = acervo.aPrin
+        }
+        
+        return cell
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            if segue.identifier == "showCollectionDetail" {
+                if let indexPath = tableView.indexPathForSelectedRow,
+                    let livro = results?.livros[indexPath.row]
+                {
+                    destination.acervo = livro
+                }
+            }
+        }
     }
 
     /*

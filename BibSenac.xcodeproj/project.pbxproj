@@ -10,6 +10,8 @@
 		56AC650B47D9F0140A474F67 /* Pods_BibSenac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */; };
 		ADB3C41F03E0E56E2670D1DA /* Pods_BibSenacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F8E27B63C88E5CD1E0F46A /* Pods_BibSenacUITests.framework */; };
 		BA626B688C2FC668FB460806 /* Pods_BibSenacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DEC1FA97A90EE3EF869FBAC /* Pods_BibSenacTests.framework */; };
+		F105CFDE1DF28D3D0092C407 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105CFDD1DF28D3D0092C407 /* SearchService.swift */; };
+		F105CFE01DF28D430092C407 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105CFDF1DF28D430092C407 /* SearchResults.swift */; };
 		FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */; };
 		FF0CE30E1DE9BFAC00CD5006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE30C1DE9BFAC00CD5006 /* Main.storyboard */; };
 		FF0CE3101DE9BFAC00CD5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		A411DA7603E7C0323B1BF45C /* Pods_BibSenac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BibSenac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAC0BA43E01518724F75EBF /* Pods-BibSenacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenacTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenacTests/Pods-BibSenacTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E21CBF60F5B2E704DA2EACFA /* Pods-BibSenac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BibSenac.release.xcconfig"; path = "Pods/Target Support Files/Pods-BibSenac/Pods-BibSenac.release.xcconfig"; sourceTree = "<group>"; };
+		F105CFDD1DF28D3D0092C407 /* SearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		F105CFDF1DF28D430092C407 /* SearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		FF0CE3051DE9BFAC00CD5006 /* BibSenac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibSenac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF0CE30D1DE9BFAC00CD5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F105CFDA1DF28B4D0092C407 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F105CFDD1DF28D3D0092C407 /* SearchService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		FF0CE2FC1DE9BFAC00CD5006 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 		FF0CE3071DE9BFAC00CD5006 /* BibSenac */ = {
 			isa = PBXGroup;
 			children = (
+				F105CFDA1DF28B4D0092C407 /* Services */,
 				FF0CE3381DE9C52B00CD5006 /* SupportFiles */,
 				FF0CE33F1DE9C5A700CD5006 /* Controller */,
 				FF0CE3391DE9C53A00CD5006 /* View */,
@@ -195,6 +208,7 @@
 		FF0CE33A1DE9C54200CD5006 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F105CFDF1DF28D430092C407 /* SearchResults.swift */,
 				FF0CE3361DE9C50300CD5006 /* Acervo.swift */,
 				FF0CE33B1DE9C56500CD5006 /* Disponibilidade.swift */,
 			);
@@ -498,7 +512,9 @@
 				FF0CE33E1DE9C59A00CD5006 /* SearchViewController.swift in Sources */,
 				FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */,
 				FF0CE3411DE9C5D300CD5006 /* TableViewController.swift in Sources */,
+				F105CFDE1DF28D3D0092C407 /* SearchService.swift in Sources */,
 				FF0CE3091DE9BFAC00CD5006 /* AppDelegate.swift in Sources */,
+				F105CFE01DF28D430092C407 /* SearchResults.swift in Sources */,
 				FF0CE3451DE9EEA300CD5006 /* AvailableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
