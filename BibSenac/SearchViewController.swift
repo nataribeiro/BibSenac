@@ -54,7 +54,6 @@ class SearchViewController: UIViewController {
                 } else {
                     let alert = UIAlertController(title: "Nenhum resultado encontrado!", message: "Altere os dados da consulta e tente novamente.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                        //execute some code when this option is selected
                         self.dismiss(animated: true, completion: nil)
                     }))
                     self.present(alert, animated: true, completion: nil)
