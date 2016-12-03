@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblSummary: UITextView!
     @IBOutlet weak var btnCheckAvailability: UIButton!
     
-    var acervo: Acervo = Acervo()
+    var acervo: Acervo
     
     override func viewDidLoad() {
         super.viewDidLoad()
