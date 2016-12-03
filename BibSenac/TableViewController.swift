@@ -49,10 +49,11 @@ class TableViewController: UITableViewController {
         
         if let img = acervo?.urlImg {
             let urlImage = URL(string: (img))
-            
-            DispatchQueue.main.async {
-                let data = try! Data(contentsOf: urlImage!)
-                cell.imgCollection.image = UIImage(data: data)
+            if (urlImage != nil) {
+                DispatchQueue.main.async {
+                    let data = try! Data(contentsOf: urlImage!)
+                        cell.imgCollection.image = UIImage(data: data)
+                }
             }
         }
 

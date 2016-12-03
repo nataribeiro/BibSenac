@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var textAssunto: UITextField!
     @IBOutlet weak var textTitulo: UITextField!
     @IBOutlet weak var textAutor: UITextField!
+    
+    var results: SearchResults = SearchResults()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,22 +32,26 @@ class SearchViewController: UIViewController {
         if (segue.identifier == "showSearchResult") {
             if let svc = segue.destination as? TableViewController
             {
-                api.loadData(textTitulo.text!, textAutor.text!, textAssunto.text!){ result, error in
-                    if let error = error
-                    {
-                        print(error)
-                    }
-                    else
-                    {
-                        svc.results = result
-                    }
-                }
+                svc.results = self.results
                 
             }
             
         }
     }
 
+    @IBAction func btnSearch(_ sender: AnyObject) {
+        api.loadData(textTitulo.text!, textAutor.text!, textAssunto.text!){ result, error in
+            if let error = error
+            {
+                print(error)
+            }
+            else
+            {
+                self.results = result!
+                self.performSegue(withIdentifier: "showSearchResult", sender: sender)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
