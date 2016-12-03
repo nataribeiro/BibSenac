@@ -18,7 +18,6 @@ class AvailableTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _senac="25542"
         
         checkAvailableFromServer(idSenac: _senac!) { (availables, error: Error?) in
             if error == nil {
