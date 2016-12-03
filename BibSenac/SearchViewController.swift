@@ -48,6 +48,7 @@ class SearchViewController: UIViewController {
             else
             {
                 self.results = result!
+                self.performSegue(withIdentifier: "showSearchResult", sender: sender)
             }
         }
     }
