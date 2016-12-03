@@ -18,23 +18,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblSummary: UITextView!
     @IBOutlet weak var btnCheckAvailability: UIButton!
     
-    var acervo: Acervo
+    var acervo = Acervo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        acervo = Acervo()
-        acervo.dstaq = "Título do Acervo"
-        acervo.chamd = ""
-        acervo.aPrin = "Autor Principal Autor Principal Autor Principal "
-        acervo.aArtg = ""
-        acervo.aScdr = "Autor Secundário Autor Secundário Autor Secundário "
-        acervo.pbcao = "1990"
-        acervo.fsico = "255 páginas"
-        acervo.rsumo = "Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Leite de capivaris, leite de mula manquis. Paisis, filhis, espiritis santis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.\nA ordem dos tratores não altera o pão duris Diuretics paradis num copo é motivis de denguis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl."
-         acervo.notas = "Adicionais ao Resumo"
-         acervo.assun = "Assuntos"
-         acervo.urlImg = "http://www.test-study-guides.com/wp-content/uploads/2013/03/Best-TOEFL-Books9.png"
         
         loadAcervoDetails()
         // Do any additional setup after loading the view.
@@ -46,12 +33,15 @@ class DetailViewController: UIViewController {
         lblCoauthor.text = acervo.aScdr
         lblPublish.text = acervo.pbcao
         lblSummary.text = acervo.rsumo
-        let urlImage = URL(string: (acervo.urlImg)!)
         
-        DispatchQueue.main.async {
-            let data = try! Data(contentsOf: urlImage!)
-            self.imgCollection.image = UIImage(data: data)
-            
+        
+        if let urlImage = URL(string: (acervo.urlImg)!) {
+            DispatchQueue.main.async {
+                let data = try! Data(contentsOf: urlImage)
+                self.imgCollection.image = UIImage(data: data)
+            }
+        } else {
+            imgCollection.image = #imageLiteral(resourceName: "no_image_available")
         }
 
     }

@@ -47,14 +47,13 @@ class TableViewController: UITableViewController {
         cell.lblTitle.text = acervo?.dstaq
         cell.lblSummary.text = acervo?.rsumo
         
-        if let img = acervo?.urlImg {
-            let urlImage = URL(string: (img))
-            if (urlImage != nil) {
-                DispatchQueue.main.async {
-                    let data = try! Data(contentsOf: urlImage!)
-                        cell.imgCollection.image = UIImage(data: data)
-                }
+        if let urlImage = URL(string: (acervo?.urlImg)!) {
+            DispatchQueue.main.async {
+                let data = try! Data(contentsOf: urlImage)
+                    cell.imgCollection.image = UIImage(data: data)
             }
+        } else {
+            cell.imgCollection.image = #imageLiteral(resourceName: "no_image_available")
         }
 
         return cell
