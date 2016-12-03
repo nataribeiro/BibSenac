@@ -8,21 +8,37 @@
 
 import Foundation
 
-struct Acervo {
-    let _id: String?
-    let _senac: String?
-    let dstaq: String?
-    let chamd: String?
-    let aPrin : String?
-    let aArtg : String?
-    let aScdr : String?
-    let pbcao : String?
-    let fsico : String?
-    let rsumo : String?
-    let notas : String?
-    let assun : String?
-    let url : String?
-    let pdico : String?
-    let serie : String?
-    let adicionado : String?
+class Acervo : NSObject {
+    override init() {
+        super.init()
+    }
+    init(dict: NSDictionary) {
+        super.init()
+        
+        for (k, v) in dict
+        {
+            let key = k as! String
+            if self.responds(to: Selector(key))
+            {
+                self.setValue(v, forKey: key)
+            }
+        }
+        
+    }
+    var _id: String? = ""
+    var _senac: String? = ""
+    var dstaq: String? = ""
+    var chamd: String? = ""
+    var aPrin : String? = ""
+    var aArtg : String? = ""
+    var aScdr : String? = ""
+    var pbcao : String? = ""
+    var fsico : String? = ""
+    var rsumo : String? = ""
+    var notas : String? = ""
+    var assun : String? = ""
+    var url : String? = ""
+    var pdico : String? = ""
+    var serie : String? = ""
+    var adicionado : String? = ""
 }
