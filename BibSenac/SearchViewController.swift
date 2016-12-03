@@ -32,8 +32,7 @@ class SearchViewController: UIViewController {
         if (segue.identifier == "showSearchResult") {
             if let svc = segue.destination as? TableViewController
             {
-                svc.results = self.results
-                
+                svc.results = self.results                
             }
             
         }
