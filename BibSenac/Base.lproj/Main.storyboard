@@ -108,7 +108,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="titulo" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVH-DJ-Smr">
-                                            <frame key="frameInset" minX="125" minY="8" width="44" height="21"/>
+                                            <frame key="frameInset" minX="125" minY="8" width="242" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -145,7 +145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0d5-wz-xVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="696"/>
+            <point key="canvasLocation" x="1924" y="695.80209895052474"/>
         </scene>
         <!--Detalhes-->
         <scene sceneID="zZG-Pr-iGz">
@@ -218,7 +218,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh4-qr-2Jw">
                                 <state key="normal" title="Verificar Disponibilidade"/>
                                 <connections>
-                                    <segue destination="0rd-tt-JGB" kind="showDetail" identifier="showAvailable" id="qtK-66-BLP"/>
+                                    <action selector="btnAvailability:" destination="dUv-qe-FtE" eventType="touchUpInside" id="hj1-kL-TcT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -253,6 +253,7 @@
                         <outlet property="lblPublish" destination="hzn-Jt-O07" id="KRr-dx-BgR"/>
                         <outlet property="lblSummary" destination="ca9-Mi-QMc" id="qyD-OO-Chv"/>
                         <outlet property="lblTitle" destination="4Tu-0h-seI" id="n96-26-z8r"/>
+                        <segue destination="0rd-tt-JGB" kind="show" identifier="showAvailable" id="3Wg-sk-17e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNn-hC-8Vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,11 +265,11 @@
             <objects>
                 <tableViewController title="Disponibilidade" id="0rd-tt-JGB" customClass="AvailableTableViewController" customModule="BibSenac" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" id="KUu-zr-iXa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="cZM-zq-aID" detailTextLabel="5kE-s0-p7z" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="Hml-DM-bnX" customClass="TableViewCell" customModule="BibSenac" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="cZM-zq-aID" detailTextLabel="5kE-s0-p7z" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="Hml-DM-bnX">
                                 <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hml-DM-bnX" id="8H9-gQ-otf">

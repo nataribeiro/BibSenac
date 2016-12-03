@@ -30,13 +30,16 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func getAvailability(_senac: String)
+    @IBAction func btnAvailability(_ sender: AnyObject){
+        self.getAvailability()
+    }
+    func getAvailability()
     {
-        self._senac = _senac
-        
-        api.loadData(_senac){ result, error in
+        api.loadData(self.acervo._senac!){ result, error in
             if error == nil {
+                print(self.acervo._senac!)
                 self.availables = result
+                self.performSegue(withIdentifier: "showAvailable", sender: nil)
             } else {
                 print(error.debugDescription)
             }
@@ -50,7 +53,7 @@ class DetailViewController: UIViewController {
             if let svc = segue.destination as? AvailableTableViewController
             {
                 svc.availables = self.availables
-            } 
+            }
         }
     }
     

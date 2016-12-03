@@ -15,8 +15,6 @@ class AvailableTableViewController: UITableViewController {
     let URL_AVAILABLE = "http://pelletteria.net.br/edm/modulos/data_mining/mAcervo_disponivel.php?_senac="
     var availables = [Disponibilidade]()
  
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -37,10 +35,10 @@ class AvailableTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let available = availables[indexPath.row]
-        cell.lblTitle.text = available.disponib
-        
+        cell.textLabel?.text = available.disponib
+        cell.detailTextLabel?.text = available.local
         return cell
     }
     
