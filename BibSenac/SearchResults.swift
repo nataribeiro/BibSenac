@@ -12,7 +12,7 @@ class SearchResults : NSObject {
 
     var isThereMore: Bool = false
     var livros: [Acervo] = []
-    
+    override init() {}
     init(JSONData: Data) {
         super.init()
         
