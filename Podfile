@@ -6,6 +6,7 @@ def shared_pods
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'Google/Analytics'
 end
 
 target 'BibSenac' do

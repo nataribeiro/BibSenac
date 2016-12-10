@@ -30,17 +30,31 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let name = "BibSenac - \(self.title!)"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker?.set(kGAIScreenName, value: name)
+        
+        let build = (GAIDictionaryBuilder.createScreenView().build() as NSDictionary) as! [AnyHashable: Any]
+        tracker?.send(build)
+    }
+    
     @IBAction func btnAvailability(_ sender: AnyObject){
+        btnCheckAvailability.isEnabled = false
         self.getAvailability()
     }
     func getAvailability()
     {
         api.loadData(self.acervo._senac!){ result, error in
             if error == nil {
+                self.btnCheckAvailability.isEnabled = true
                 print(self.acervo._senac!)
                 self.availables = result
                 self.performSegue(withIdentifier: "showAvailable", sender: nil)
             } else {
+                self.btnCheckAvailability.isEnabled = true
                 print(error.debugDescription)
             }
             

@@ -26,6 +26,9 @@
 		FF0CE3431DE9C5ED00CD5006 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */; };
 		FF0CE3451DE9EEA300CD5006 /* AvailableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */; };
 		FF1D74361DF2E54D007B067E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1D74351DF2E54D007B067E /* TableViewCell.swift */; };
+		FF1E47691DFC38E600D04C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF1E47681DFC38E600D04C58 /* GoogleService-Info.plist */; };
+		FF1E476A1DFC38E600D04C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF1E47681DFC38E600D04C58 /* GoogleService-Info.plist */; };
+		FF1E476B1DFC38E600D04C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF1E47681DFC38E600D04C58 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,8 @@
 		FF0CE3421DE9C5ED00CD5006 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FF0CE3441DE9EEA300CD5006 /* AvailableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableTableViewController.swift; sourceTree = "<group>"; };
 		FF1D74351DF2E54D007B067E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FF1E47671DFC376300D04C58 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		FF1E47681DFC38E600D04C58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,10 +199,12 @@
 		FF0CE3381DE9C52B00CD5006 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FF1E47681DFC38E600D04C58 /* GoogleService-Info.plist */,
 				FF0CE3081DE9BFAC00CD5006 /* AppDelegate.swift */,
 				FF0CE30F1DE9BFAC00CD5006 /* Assets.xcassets */,
 				FF0CE3111DE9BFAC00CD5006 /* LaunchScreen.storyboard */,
 				FF0CE3141DE9BFAC00CD5006 /* Info.plist */,
+				FF1E47671DFC376300D04C58 /* BridgingHeader.h */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -350,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF0CE3131DE9BFAC00CD5006 /* LaunchScreen.storyboard in Resources */,
+				FF1E47691DFC38E600D04C58 /* GoogleService-Info.plist in Resources */,
 				FF0CE3101DE9BFAC00CD5006 /* Assets.xcassets in Resources */,
 				FF0CE30E1DE9BFAC00CD5006 /* Main.storyboard in Resources */,
 			);
@@ -359,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1E476A1DFC38E600D04C58 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1E476B1DFC38E600D04C58 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +647,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,6 +690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

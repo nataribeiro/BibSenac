@@ -85,6 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JLk-IR-RXr"/>
                     <connections>
+                        <outlet property="outletSearch" destination="M7e-qT-MWO" id="gVO-P3-7nh"/>
                         <outlet property="textAssunto" destination="57r-aO-71B" id="86F-yh-7pK"/>
                         <outlet property="textAutor" destination="4ZV-vZ-kKv" id="W1b-eU-AMM"/>
                         <outlet property="textTitulo" destination="fyR-RS-gwt" id="LoD-ei-Qb9"/>
@@ -107,20 +108,19 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="151" id="hAy-Yf-xNI" customClass="TableViewCell" customModule="BibSenac" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="hAy-Yf-xNI" id="h6T-BM-Brk">
-                                    <frame key="frameInset" width="375" height="151"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hAy-Yf-xNI" id="h6T-BM-Brk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YT-7B-e1G">
-                                            <frame key="frameInset" width="1000" height="1000"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4YT-7B-e1G">
+                                            <rect key="frame" x="8" y="-8" width="100" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="150" id="5zR-7U-PZ5"/>
                                                 <constraint firstAttribute="width" constant="100" id="aPf-tO-oj3"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="titulo" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVH-DJ-Smr">
-                                            <frame key="frameInset" minX="125" minY="8" width="242" height="21"/>
-
+                                            <rect key="frame" x="125" y="8" width="242" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -243,7 +243,6 @@
                                 <state key="normal" title="Verificar Disponibilidade"/>
                                 <connections>
                                     <action selector="btnAvailability:" destination="dUv-qe-FtE" eventType="touchUpInside" id="hj1-kL-TcT"/>
-
                                 </connections>
                             </button>
                         </subviews>

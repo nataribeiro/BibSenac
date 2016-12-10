@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Google.Analytics
+
 fileprivate let api = SearchService()
 
 class SearchViewController: UIViewController {
@@ -14,12 +16,24 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var textAssunto: UITextField!
     @IBOutlet weak var textTitulo: UITextField!
     @IBOutlet weak var textAutor: UITextField!
+    @IBOutlet weak var outletSearch: UIButton!
     
     var results: SearchResults = SearchResults()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let name = "BibSenac - \(self.title!)"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker?.set(kGAIScreenName, value: name)
+        
+        let build = (GAIDictionaryBuilder.createScreenView().build() as NSDictionary) as! [AnyHashable: Any]
+        tracker?.send(build)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,13 +54,16 @@ class SearchViewController: UIViewController {
 
     @IBAction func btnSearch(_ sender: AnyObject) {
         
+        outletSearch.isEnabled = false
         api.loadData(textTitulo.text!, textAutor.text!, textAssunto.text!){ result, error in
             if let error = error
             {
                 print(error)
+                self.outletSearch.isEnabled = true
             }
             else
             {
+                self.outletSearch.isEnabled = true
                 if result != nil && (result?.livros.count)! > 0 {
                     self.results = result!
                     self.performSegue(withIdentifier: "showSearchResult", sender: sender)
