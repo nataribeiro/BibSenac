@@ -35,11 +35,6 @@ class SearchViewController: UIViewController {
         let build = (GAIDictionaryBuilder.createScreenView().build() as NSDictionary) as! [AnyHashable: Any]
         tracker?.send(build)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -53,6 +48,36 @@ class SearchViewController: UIViewController {
     }
 
     @IBAction func btnSearch(_ sender: AnyObject) {
+        let tracker = GAI.sharedInstance().defaultTracker
+        
+        let all = "\(textTitulo.text!) ; \(textAutor.text!) ; \(textAssunto.text!)"
+        let event = (GAIDictionaryBuilder.createEvent(withCategory: "Search", action: "All", label: all, value: nil).build() as NSDictionary) as! [AnyHashable: Any]
+        tracker?.send(event)
+        
+        if let title = textTitulo.text {
+            if !title.isEmpty {
+                let event2 = (GAIDictionaryBuilder.createEvent(withCategory: "Search", action: "Title", label: title, value: nil).build() as NSDictionary) as! [AnyHashable: Any]
+                tracker?.send(event2)
+            }
+        }
+        if let author = textAutor.text {
+            if !author.isEmpty {
+                let event2 = (GAIDictionaryBuilder.createEvent(withCategory: "Search", action: "Author", label: author, value: nil).build() as NSDictionary) as! [AnyHashable: Any]
+                tracker?.send(event2)
+            }
+        }
+        if let subject = textAssunto.text {
+            if !subject.isEmpty {
+                let event2 = (GAIDictionaryBuilder.createEvent(withCategory: "Search", action: "Subject", label: subject, value: nil).build() as NSDictionary) as! [AnyHashable: Any]
+                tracker?.send(event2)
+            }
+        }
+        
+        
+        
+       
+        
+        
         
         outletSearch.isEnabled = false
         api.loadData(textTitulo.text!, textAutor.text!, textAssunto.text!){ result, error in
